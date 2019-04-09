@@ -1,0 +1,46 @@
+
+// COLORS
+
+$primary-color: red
+$secondary-color: blue
+$text-color: black
+
+// FONT FAMILIES
+
+$font-primary: "Helvetica", "Arial", sans-serif
+$font-secondary: "Times", serif
+
+// GRID SYSTEM
+
+// - Full
+
+$site-width: 1200px
+$number-of-cols: 12
+
+$gutter: 20px
+$outer-gutter: 20px
+
+$gutters: $number-of-cols * $gutter
+
+$col: calc(($site-width - $gutters) / $number-of-cols)
+
+// - Responsive
+
+$r-col: calc((100vw - $gutters - 2 * $outer-gutter) / $number-of-cols)
+
+// - Mobile
+
+$m-number-of-cols: 4
+
+$m-gutter: 20px
+$m-outer-gutter: 30px
+
+$m-gutters: $m-number-of-cols * $m-gutter
+
+$m-col: calc((100vw - $m-gutters - 2 * $m-outer-gutter) / $m-number-of-cols)
+
+
+@custom-media --responsive (max-width: calc($site-width + 2 * $outer-gutter))
+@custom-media --tablet (max-width: 1024px)
+@custom-media --mobile (max-width: 768px)
+@custom-media --small-mobile (max-width: 414px)

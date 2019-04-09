@@ -1,0 +1,88 @@
+# ignore all files starting with .
+.*
+
+# track this file .gitignore (i.e. do NOT ignore it)
+!.gitignore
+!.gitkeep
+!.babelrc
+
+# dodaj i .htaccess na repo
+!.htaccess
+
+# track .editorconfig file (i.e. do NOT ignore it)
+!.editorconfig
+
+# track readme.md in the root (i.e. do NOT ignore it)
+!readme.md
+
+# ignore all files that start with ~
+~*
+
+# ignore OS generated files
+ehthumbs.db
+Thumbs.db
+
+# ignore Editor files
+*.sublime-project
+*.sublime-workspace
+*.komodoproject
+.idea
+.idea/
+.idea/*
+.idea*
+*.idea
+
+# ignore log files and databases
+*.log
+!*.sql
+*.sqlite
+
+# ignore compiled files
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# ignore packaged files
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# ignore everything in the "wp-content" directory, except:
+# "mu-plugins" directory
+# "plugins" directory
+!web/wp-content/mu-plugins/
+!web/wp-content/plugins/
+
+# ignore specific themes
+web/wp-content/themes/twenty*/
+
+# ignore node/grunt dependency directories
+web/wp-content/themes/*/dist/
+web/wp-content/themes/*/node_modules/
+
+# ignore test generated files
+
+web/wp-content/themes/*/covarage
+web/gemini
+web/my
+
+# ignore caches
+
+web/wp-content/wphb-cache
+web/wp-content/wphb-cache/
+web/wp-content/wphb-cache/*
+!web/wp-content/wphb-cache/wphb-cache.php
+web/wp-content/wphb-logs
+web/wp-content/wphb-logs/
+web/wp-content/wphb-logs/*
+
+# dodaj gitlab ci/cd
+!.gitlab-ci.yml

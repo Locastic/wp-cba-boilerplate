@@ -1,0 +1,32 @@
+@critical
+    *
+        padding: 0
+        margin: 0
+        box-sizing: border-box
+
+    .container
+        max-width: $site-width
+        width: calc(100% - 2  * $outer-gutter)
+        margin-left: auto
+        margin-right: auto
+        padding-left: calc($gutter / 2)
+        padding-right: calc($gutter / 2)
+       
+        @media(--mobile)
+            width: calc(100% - 2  * $m-outer-gutter)
+            padding-left: calc($m-gutter / 2)
+            padding-right: calc($m-gutter / 2)
+
+    .text-color
+        background: $text-color
+
+    .primary-color
+        background: $primary-color
+
+    .secondary-color
+        background: $secondary-color
+
+
+
+
+    

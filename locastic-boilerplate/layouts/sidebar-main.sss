@@ -1,0 +1,24 @@
+@critical
+    .l
+        &-sidebar-main
+            display: flex
+            flex-wrap: wrap
+
+        &-sidebar
+            flex: 1
+            max-width: calc(2 * $col + $gutter)
+            @media(--responsive)
+                max-width: calc(2 * $r-col + $gutter)
+            @media(--mobile)
+                min-width: 100%
+
+        &-main
+            flex: 1
+            margin-left: calc($col + 2 * $gutter)
+            @media(--responsive)
+                margin-left: calc($r-col + 2 * $gutter)
+            @media(--mobile)
+                margin-left: 0
+
+
+  

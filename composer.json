@@ -1,0 +1,14 @@
+{
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    }
+  ],
+  "require": {
+    "wpackagist-plugin/timber-library": "^1.9",
+    "wpackagist-plugin/advanced-custom-fields": "^5.7",
+    "wpackagist-plugin/contact-form-7": "^5.1",
+    "wpackagist-plugin/super-progressive-web-apps": "^2.0"
+  }
+}

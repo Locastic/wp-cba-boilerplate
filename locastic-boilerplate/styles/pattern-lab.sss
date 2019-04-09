@@ -1,0 +1,20 @@
+.pattern-lab
+    [class^="l-"]
+        min-height: 100vh
+        border: 1px solid black
+
+.sg-main
+    max-width: $site-width
+    width: calc(100% - 2  * $outer-gutter)
+    margin-left: auto
+    margin-right: auto
+    padding-left: calc($gutter / 2)
+    padding-right: calc($gutter / 2)
+    
+    @media(--mobile)
+        width: calc(100% - 2  * $m-outer-gutter)
+        padding-left: calc($m-gutter / 2)
+        padding-right: calc($m-gutter / 2)
+
+#sg-patterns
+    padding: 0!important

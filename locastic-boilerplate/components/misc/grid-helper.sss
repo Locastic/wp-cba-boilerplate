@@ -1,0 +1,35 @@
+.grid 
+    display: flex
+    justify-content: space-around
+    position: fixed
+    max-width: $site-width
+    width: calc(100% - 2  * $outer-gutter)
+    height: 100vh
+    left: 50%
+    transform: translateX(-50%)
+    top: 0
+    z-index: 1
+    pointer-events: none
+
+    @media(--mobile)
+        width: calc(100% - 2  * $m-outer-gutter)
+
+    &__col 
+        flex: 1
+        max-width: $col
+        background: rgba(255, 0, 0, 0.05)
+
+        @media(--responsive)
+            max-width: $r-col
+        @media(--mobile)
+            max-width: $m-col
+   
+            &:nth-of-type(n+5)
+                display: none
+            
+
+
+@custom-media --responsive (max-width: calc($site-width + 2 * $outer-gutter))
+@custom-media --tablet (max-width: 1024px)
+@custom-media --mobile (max-width: 768px)
+@custom-media --small-mobile (max-width: 414px)

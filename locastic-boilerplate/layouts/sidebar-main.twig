@@ -1,0 +1,16 @@
+{% extends "base.twig" %}
+
+{% block body %}
+    <div class="container l-sidebar-main">
+        <div class="l-sidebar">
+        {% block sidebar %}
+        {% endblock %}
+        </div>
+
+        <div class="l-main">
+            {% block main %}
+            {% endblock %}
+        </div>
+    </div>
+
+{% endblock %}

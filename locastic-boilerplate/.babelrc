@@ -1,0 +1,13 @@
+{
+    "plugins": ["@babel/transform-arrow-functions","@babel/plugin-transform-runtime"],
+    "presets": [ ["@babel/preset-env", {"modules": false} ]],
+    "env": {
+        "test" : {
+            "plugins": ["@babel/transform-modules-commonjs",
+            ["@babel/plugin-transform-runtime", {
+                "regenerator": true,
+              }],
+            ],
+        }
+    }
+}
