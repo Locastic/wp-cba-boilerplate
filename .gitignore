@@ -6,7 +6,7 @@
 !.gitkeep
 !.babelrc
 
-# dodaj i .htaccess na repo
+# add  .htaccess to the repo
 !.htaccess
 
 # track .editorconfig file (i.e. do NOT ignore it)
@@ -58,31 +58,29 @@ Thumbs.db
 # ignore everything in the "wp-content" directory, except:
 # "mu-plugins" directory
 # "plugins" directory
-!web/wp-content/mu-plugins/
-!web/wp-content/plugins/
+!wp-content/mu-plugins/
+!wp-content/plugins/
 
-# ignore specific themes
-web/wp-content/themes/twenty*/
+# ignore default themes
+wp-content/themes/twenty*/
 
 # ignore node/grunt dependency directories
-web/wp-content/themes/*/dist/
-web/wp-content/themes/*/node_modules/
+themes/*/dist/
+themes/*/node_modules/
 
 # ignore test generated files
 
-web/wp-content/themes/*/covarage
-web/gemini
-web/my
+/wp-content/themes/*/covarage
+/gemini
+/my
 
 # ignore caches
 
-web/wp-content/wphb-cache
-web/wp-content/wphb-cache/
-web/wp-content/wphb-cache/*
-!web/wp-content/wphb-cache/wphb-cache.php
-web/wp-content/wphb-logs
-web/wp-content/wphb-logs/
-web/wp-content/wphb-logs/*
+wp-content/wphb-cache
+wp-content/wphb-cache/
+wp-content/wphb-cache/*
+!wp-content/wphb-cache/wphb-cache.php
+wp-content/wphb-logs
+wp-content/wphb-logs/
+wp-content/wphb-logs/*
 
-# dodaj gitlab ci/cd
-!.gitlab-ci.yml
