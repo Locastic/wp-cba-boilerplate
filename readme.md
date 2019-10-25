@@ -22,13 +22,14 @@ Clone this repo inside of a fresh WP installation
 |-- wp-admin
 |-- wp-content
 |-- wp-includes
-|-- locastic-wordpress-theme-boilerplate + 
-composer.json + 
-composer.json.lock + 
+|-- wp-cba-boilerplate + 
+|--|--locastic-boilerplate +
+|--|--composer.json + 
+|--|--composer.json.lock + 
 ```
 
 You can rename the boilerplate folder and place it inside of your themes folder
-Composer.json should stay at the root of your WP installation
+Composer.json should be moved to the root of your WP installation
 
 ```
 |-- wp-admin
