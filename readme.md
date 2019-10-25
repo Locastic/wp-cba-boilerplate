@@ -7,7 +7,6 @@
 - [x] JS unit testing with Jest
 - [x] Grid / Layout system
 - [x] Variables and breakpoints
-- [x] Form control (Standardized markup, style resets, async validation and submiting)
 - [x] PostCSS
 - [x] Critical CSS
 - [x] JS Code splitting
