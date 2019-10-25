@@ -32,16 +32,22 @@ function add_to_context($context)
     if (!file_exists($dir)) {
         echo "
         <style>
+
+            #error-page{
+                position: relative;
+            }
+            
             .timber-notice{
-                max-width:460px;
+                box-sizing: border-box;
+                background: white;
+                width: 100%;
+                height: 100%;
                 padding: 30px;
                 font-size: 17px;
                 line-height: 1.35;
-                position: fixed;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                box-shadow: 2px 2px 70px rgba(0,0,0,0.05);
+                position: absolute;
+                top: 0;
+                left: 0;
                 font-family: sans-serif;
                 color: #222;
             }
@@ -88,6 +94,7 @@ if (!is_plugin_active("timber-library/timber.php")) {
             #wpadminbar {
                 z-index: 10000001!important;
             }
+
             .timber-notice{
                 width: 100%;
                 padding: 20px;
@@ -113,19 +120,24 @@ if (!is_plugin_active("timber-library/timber.php")) {
     } else {
         echo "
         <style>
-            .timber-notice{
-                max-width:460px;
-                padding: 30px;
-                font-size: 17px;
-                line-height: 1.35;
-                position: fixed;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                box-shadow: 2px 2px 70px rgba(0,0,0,0.05);
-                font-family: sans-serif;
-                color: #222;
-            }
+
+        #error-page{
+            position: relative;
+        }
+        .timber-notice{
+            box-sizing: border-box;
+            background: white;
+            width: 100%;
+            height: 100%;
+            padding: 30px;
+            font-size: 17px;
+            line-height: 1.35;
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-family: sans-serif;
+            color: #222;
+        }
 
             .timber-notice h2 {
                 margin-top: 0;
