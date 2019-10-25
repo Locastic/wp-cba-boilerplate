@@ -53,6 +53,9 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: (env == "development") ? 'style.css' : 'style.[contenthash].css'
     }),
+    new MiniCssExtractPlugin({
+      filename:  '../pattern-lab/source/css/imported.css',
+    }),
     new CopyWebpackPlugin([
       {
         from: './assets/images/',
@@ -70,6 +73,10 @@ module.exports = {
         from: './assets/videos/',
         to: './assets/videos/'
       },
+      {
+        from: 'critical.css',
+        to: './../pattern-lab/source/css/critical.css'
+      }
   ]),
     new ImageminPlugin({ test: /\.(jpe?g|png|gif|svg)$/i, svgo: null})
   ],

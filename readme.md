@@ -4,7 +4,6 @@
 
 - [x] Twig components and templates
 - [x] Living styleguide
-- [x] Visual regression testing
 - [x] JS unit testing with Jest
 - [x] Grid / Layout system
 - [x] Variables and breakpoints
@@ -16,7 +15,7 @@
 - [x] Helpers
 - [x] Install starter plugins with composer (Contact field 7, Advanced custom fields, Timber, Super pwa)
 
-## Get started
+## Getting started
 
 Clone this repo inside of a fresh WP installation
 
@@ -24,22 +23,19 @@ Clone this repo inside of a fresh WP installation
 |-- wp-admin
 |-- wp-content
 |-- wp-includes
-|-- locatic-boilerplate
-composer.json
-composer.json.lock
+|-- locatic-boilerplate + 
+composer.json + 
+composer.json.lock + 
 ```
 
 You can rename the boilerplate folder and place it inside of your themes folder
-
-```
-/wp-content/themes/project-name
-```
-
-Composer.json should be at the root of your WP installation
+Composer.json should stay at the root of your WP installation
 
 ```
 |-- wp-admin
 |-- wp-content
+    |--themes
+        |--locastic-boilerplate -> your-project-name
 |-- wp-includes
 composer.json
 composer.json.lock
@@ -47,19 +43,21 @@ composer.json.lock
 
 Install starter plugins with composer (Contact field 7, Advanced custom fields, Timber, Super pwa)
 
+from root: 
 ```
 composer install
 ```
 
 Move inside the theme folder
 ```
-/wp-content/themes/project-name
+/wp-content/themes/your-project-name
 ```
 and build the assets
 ```
 npm run dev <- for development
 npm run build <- for production
 ```
+
 
 ### Setup your theme and plugins
 
@@ -92,6 +90,8 @@ Components are the basic building blocks of your website
 ### Styles
 
 Styling is written with .sss and processed with postCSS
+
+To see and modify the used postCSS plugins open up the postcss.config.json file from inside the root of the theme
 
 Global styles are located inside the styles folder
 
@@ -211,6 +211,7 @@ All of the themes templates are automatically synced to Pattern lab.
 You can generate and serve your styleguide with the following commands from inside the pattern-lab folder
 
 ```
+composer install
 php core/console --generate
 php core/console --watch
 php core/console --server
@@ -218,15 +219,6 @@ php core/console --server
 
 ## Testing
 
-### Visual regression testing
-
-This boilerplates comes with preconfigured Visual regression testing with Gemini which can report any changes inside your styleguide accross multiple breakpoints.
-
-You can run the tests with:
-
-```
-gemini test
-```
 ### Javascript unit testing
 
 Save your Jest files as scriptName.test.js next to the file being tested and then run:
@@ -235,15 +227,18 @@ Save your Jest files as scriptName.test.js next to the file being tested and the
 npm test
 ```
 
+### Visual regression testing
+
+Gemini visual regression testing coming soon 
+
 ## TODO:
 
-- [ ] Form control system
-- [ ] Move critical.sss to dist
-- [ ] Extra plugins - yoast seo, WPMU Dev, manage cookies
-- [ ] Styleguide - typohgraphy
-- [ ] Styleguide - boilerplate data.json
+- [ ] Helper classes for using the grid from within twig files
+- [ ] Contact form 7 extensions for prebuilt real time validation and base styles
+- [ ] Visual regression testing
+- [ ] Demo styleguide - typohgraphy
 - [ ] Styleguide - sync media queries
-- [ ] Toggle grid
-- [ ] Example custom post types 
+- [ ] Example custom post types
 - [ ] Linting
 - [ ] Progressive css rendering and code splitting
+- [ ] Swup.js page transitions

@@ -4,11 +4,6 @@
  * These styles will not be your production CSS.
  */
 
-
- @import "http://192.168.19.50/wp-content/themes/boilerplate/critical.css";
- @import "http://192.168.19.50/wp-content/themes/boilerplate/dist/style.css";
-
-
 #sg-patterns {
   -webkit-box-sizing: border-box !important;
           box-sizing: border-box !important;
