@@ -22,7 +22,7 @@ Clone this repo inside of a fresh WP installation
 |-- wp-admin
 |-- wp-content
 |-- wp-includes
-|-- locatic-boilerplate + 
+|-- locastic-wordpress-theme-boilerplate + 
 composer.json + 
 composer.json.lock + 
 ```

@@ -1,14 +1,35 @@
 <div class="grid">
-    <div class="grid__col"></div>    
-    <div class="grid__col"></div>    
-    <div class="grid__col"></div>    
-    <div class="grid__col"></div>    
-    <div class="grid__col"></div>    
-    <div class="grid__col"></div>    
-    <div class="grid__col"></div>    
-    <div class="grid__col"></div>    
-    <div class="grid__col"></div>    
-    <div class="grid__col"></div>    
-    <div class="grid__col"></div>    
-    <div class="grid__col"></div>    
+    <div class="grid__col"></div>
+    <div class="grid__col"></div>
+    <div class="grid__col"></div>
+    <div class="grid__col"></div>
+    <div class="grid__col"></div>
+    <div class="grid__col"></div>
+    <div class="grid__col"></div>
+    <div class="grid__col"></div>
+    <div class="grid__col"></div>
+    <div class="grid__col"></div>
+    <div class="grid__col"></div>
+    <div class="grid__col"></div>
 </div>
+
+<script>
+    let gridDebounce = false
+    let gridTimeout;
+
+    document.addEventListener("keydown", (event) => {
+
+        if (event.key == "g") {
+            clearTimeout(gridTimeout);
+            if (gridDebounce) {
+                document.querySelector(".grid").classList.toggle("visible");
+            }
+
+            gridDebounce = true;
+
+            gridTimeout = setTimeout(() => {
+                gridDebounce = false;
+            }, 400);
+        }
+    })
+</script>
