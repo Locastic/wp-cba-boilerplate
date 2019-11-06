@@ -7,5 +7,11 @@
     <title>{{site.name}}</title>
     <style type="text/css">{{ source("/critical.css")}}</style>
     {{ fn('wp_head') }}
+     <!--[if !IE]-->
+         <script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>  
+    <!--<![endif]-->
+    <!--[if IE]-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.6.0/polyfill.min.js"></script>
+    <!--<![endif]-->
 </head>
 <body>
